@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:myTop="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <pype.mingming.bibiteacher.myhomepage.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myChatTopBar"
+        myTop:leftText="返回"
+        myTop:leftTextColor="@android:color/background_light"
+        myTop:rightText="清除记录"
+        myTop:rightTextColor="@android:color/background_light"
+        myTop:titleColor="@android:color/background_light"
+        android:layout_alignParentTop="true"
+        myTop:titleSize="7dp"
+        >
+
+    </pype.mingming.bibiteacher.myhomepage.TopBar>
+    <!--android:transcriptMode="normal"属性可以是list避免被软键盘覆盖住-->
+    <ListView
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="#0000"
+        android:layout_marginBottom="10dp"
+        android:transcriptMode="normal">
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:id="@+id/etChat"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:textSize="22sp"
+            />
+        <Button
+            android:id="@+id/btnChatSend"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btnuser_ripple"
+            android:text="发送"/>
+    </LinearLayout>
+
+</LinearLayout>
